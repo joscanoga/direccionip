@@ -104,8 +104,31 @@ function obtenerValorParametro(sParametroNombre) {
         var ipdiv =ip.split(".");
         var ipbin="";
         for(var i=0;i<4;i++){
-            ipbin+=parseInt(ipdiv[i],10).toString(2);
-        }
+            var dec=parseInt(ipdiv[i],10);
+           // alert(dec+1);
+           var ipbint=dec.toString(2);
+           var len=ipbint.length
+           //alert(len);
+            if(len==0){
+                ipbin+="00000000";
+            }else if(len==1){
+               ipbin+="0000000"+ipbint;
+            }else if(len==2){
+            ipbin+="000000"+ipbint;
+            }else if(len==3){
+                ipbin+="00000"+ipbint;
+            }else if(len==4){
+                    ipbin+="0000"+ipbint;
+            }else if(len==5){
+                        ipbin+="000"+ipbint;
+            }else if(len==6){
+                            ipbin+="00"+ipbint;
+            }else if(len==7){
+                ipbin+="0"+ipbint;
+            }else if(len==8){
+            ipbin+=ipbint;}
+    }
+        return ipbin;
         return ipbin;
     }
     //# mascara dec
