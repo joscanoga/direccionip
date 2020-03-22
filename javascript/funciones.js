@@ -179,7 +179,11 @@ function ipRed(ip,n){
             oct+=ipredbin.charAt(j);
             //alert(oct);
         }
-        ipRed+=""+parseInt(oct,2).toString()+".";
+          if (k==3){
+            ipRed+=""+parseInt(oct,2).toString();
+          }else{
+            ipRed+=""+parseInt(oct,2).toString()+".";
+          }
     }
     return ipRed;
 }
@@ -201,7 +205,11 @@ function ipBroadcast(ip,n){
               oct+=ipredbin.charAt(j);
               //alert(oct);
           }
-          ipRed+=""+parseInt(oct,2).toString()+".";
+          if (k==3){
+            ipRed+=""+parseInt(oct,2).toString();
+          }else{
+            ipRed+=""+parseInt(oct,2).toString()+".";
+          }
         }
         return ipRed;
 }
