@@ -65,7 +65,7 @@ function procesarDosIp(){
    var ipred=ipRed(ip1bin,numeromascara);
    var ipB=ipBroadcast(ip1bin,numeromascara)
     //document.write("<p>direccion de red: "+mismared(ip1bin,ip2bin,numeromascara)+"</p>");
-   // document.write("<h1>"+nuemromascara+"p</h1>");
+   // document.write("<h1>"+ip1bin+"p</h1>");
    if(!mismared(ip1bin,ip2bin,numeromascara)){
        document.write("<h1>No pertenecen a la misma red</h1>")
    }else{document.write("<table id='tresult'><tr><td>dirrecion de red</td><td>"+ipred+"</td></tr><tr><td>ip brodcast</td><td>"+ipB+"/"+numeromascara+"</td></tr><tr><td>numero max usuarios</td><td>"+(Math.pow(2,(32-numeromascara))-2)+"</td></tr></table>");
@@ -104,8 +104,30 @@ function obtenerValorParametro(sParametroNombre) {
         var ipdiv =ip.split(".");
         var ipbin="";
         for(var i=0;i<4;i++){
-            ipbin+=parseInt(ipdiv[i],10).toString(2);
-        }
+            var dec=parseInt(ipdiv[i],10);
+           // alert(dec+1);
+           var ipbint=dec.toString(2);
+           var len=ipbint.length
+           //alert(len);
+            if(len==0){
+                ipbin+="00000000";
+            }else if(len==1){
+               ipbin+="0000000"+ipbint;
+            }else if(len==2){
+            ipbin+="000000"+ipbint;
+            }else if(len==3){
+                ipbin+="00000"+ipbint;
+            }else if(len==4){
+                    ipbin+="0000"+ipbint;
+            }else if(len==5){
+                        ipbin+="000"+ipbint;
+            }else if(len==6){
+                            ipbin+="00"+ipbint;
+            }else if(len==7){
+                ipbin+="0"+ipbint;
+            }else if(len==8){
+            ipbin+=ipbint;}
+    }
         return ipbin;
     }
     //# mascara dec
@@ -177,4 +199,3 @@ function ipBroadcast(ip,n){
 
 
 
-    
