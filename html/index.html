@@ -6,40 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>direciones ip
     </title>
+    <script type="text/javascript" src="../javascript/funciones.js">
+    </script>
 </head>
 <body>
     <header><center>DIRECCIONES IP</center></header>
 <div id="indice">
 <div id="ind1">
-    <form action="primera.html" target="resultado" name="form1">
-        <label for="texto">direccion ip 1</label>
-        <input id="texto" type="text" placeholder="ip 1" value="" name="ip1" required>
-        <br>
-        <label for="texto">direccion ip 2</label>
-        <input id="texto" type="text" placeholder="ip 2" value="" name="ip2" required>
-        <br>
-        <label for="texto">mascara&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; </label>
-        <input id="texto" type="text" placeholder="255.255.255.255" value="" name="mascara" required>
-        <br>
-        <input type="submit" value="validar">
+    <table>
+    <form action="primera.html"  target="resultado" name="form1" onsubmit=" return verificarDosIp(this)" id="form1">
+        <tr>
+        <td><label for="ip11">direccion ip 1</label></td>
+        <td><input id="ip11" type="text" placeholder="ip 1" value="255.255.255.255" name="ip1" required onfocus="this.select()"></td>
+    </tr>
+    <tr>
+      <td>  <label for="ip21">direccion ip 2</label></td>
+       <td> <input id="ip21" type="text" placeholder="ip 2" value="255.255.255.255" name="ip2" required onfocus="this.select()"></td>
+    </tr>
+    <tr>
+       <td> <label for="mascara1">mascara</label></td>
+        <td><input id="mascara1" type="text" placeholder="255.255.255.255" value="255.255.255.255" name="mascara" required onfocus="this.select()"></td>
+    </tr>
+    <tr>
+    <td><input type="submit" value="validar"></td>
+    </tr>
     </form>
-    
+</table>
 </div>
 <div id="ind2">
-    <form action="segunda.html" target="resultado" name="form2">
-        <label for="texto">direccion ip 1</label>
-        <input id="texto" type="text" placeholder="ip 1" value="" name="ip1" required>
-        <br>
-        <label for="texto">mascara&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </label>
-        <input id="texto" type="text" placeholder="255.255.255.255" value="" name="mascara" required>
-        <br>
-        <input type="submit" value="validar">
-    </form>
+    <table>
+        <form action="segunda.html" target="resultado" name="form2" onsubmit=" return verificarUnaIp(this)" >
+            <tr>
+            <td><label for="ip12">direccion ip 1</label></td>
+            <td><input id="ip12" type="text" placeholder="ip 1" value="255.255.255.255" name="ip1" required onfocus="this.select()"></td>
+        </tr>
+        
+        <tr>
+           <td> <label for="mascara1">mascara</label></td>
+            <td><input id="mascara1" type="text" placeholder="255.255.255.255" value="255.255.255.255" name="mascara" required onfocus="this.select()"></td>
+        </tr>
+        <tr>
+        <td><input type="submit" value="validar"></td>
+        </tr>
+        </form>
+    </table>
+    
 </div>
 </div>
  </div>   
  <div id="resultado">
-   <iframe src="https://facebook.com" frameborder="0" name="resultado" id="result" width="100%" height="100%"></iframe>
+
+  <iframe src="" frameborder="0" name="resultado" id="result" width="100%" height="100%"></iframe> 
  </div>
 </body>
 </html>
