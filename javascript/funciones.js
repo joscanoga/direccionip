@@ -68,7 +68,7 @@ function procesarDosIp(){
    // document.write("<h1>"+nuemromascara+"p</h1>");
    if(!mismared(ip1bin,ip2bin,numeromascara)){
        document.write("<h1>No pertenecen a la misma red</h1>")
-   }else{document.write("<table id='tresult'><tr><td>dirrecion de red</td><td>"+ipred+"</td></tr><tr><td>ip brodcast</td><td>"+ipB+"/"+numeromascara+"</td></tr><tr><td>numero max usuarios</td><td>"+(Math.pow(2,(32-numeromascara))-2)+"</td></tr></table>");
+   }else{document.write("<table id='tresult' style='font-size:55px'><tr><td>Dirreción de red:</td><td>"+ipred+"</td></tr><tr><td>Ip brodcast:</td><td>"+ipB+"/"+numeromascara+"</td></tr><tr><td>Número máx usuarios:</td><td>"+(Math.pow(2,(32-numeromascara))-2)+"</td></tr></table>");
 
    }
 }
@@ -83,7 +83,7 @@ function procesarUnIp(){
    var ipB=ipBroadcast(ip1bin,numeromascara)
     //document.write("<p>direccion de red: "+mismared(ip1bin,ip2bin,numeromascara)+"</p>");
    // document.write("<h1>"+nuemromascara+"p</h1>");
-   document.write("<table id='tresult'><tr><td>dirrecion de red</td><td>"+ipred+"</td></tr><tr><td>ip brodcast</td><td>"+ipB+"/"+numeromascara+"</td></tr><tr><td>numero max usuarios</td><td>"+(Math.pow(2,(32-numeromascara))-2)+"</td></tr></table>");
+   document.write("<table id='tresult' style='font-size:55px'><tr><td>Dirreción de red:</td><td>"+ipred+"</td></tr><tr><td>Ip brodcast:</td><td>"+ipB+"/"+numeromascara+"</td></tr><tr><td>Número máx usuarios:</td><td>"+(Math.pow(2,(32-numeromascara))-2)+"</td></tr></table>");
 
    
 }
