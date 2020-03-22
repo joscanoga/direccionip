@@ -1,3 +1,14 @@
+
+function verificarmascara(mas){
+   var mask= pasaripbinario(mas)
+    for(var i=mascaraD(mask);i<32;i++){
+        if(mask.charAt(i)!="0"){
+            return true;
+            break;
+        };
+    };
+    return false;
+}
 function verificarUnaIp(form){
     var estado=true;
     var ip1 =form.ip1;
@@ -9,7 +20,7 @@ if(!verificarip(ip1.value)){
     ip1.focus();
     ip1.select();
     estado=false;
-}else if(!verificarip(mascara.value)){
+}else if(!verificarip(mascara.value)||verificarmascara(mascara.value)){
     alert(" mascara no tiene formato valido")
     mascara.focus();
     mascara.select();
@@ -34,7 +45,7 @@ if(!verificarip(ip1.value)){
     ip2.focus();
     ip2.select();
     estado=false;
-}else if(!verificarip(mascara.value)){
+}else if(!verificarip(mascara.value)||verificarmascara(mascara.value)){
     alert(" mascara no tiene formato valido")
     mascara.focus();
     mascara.select();
