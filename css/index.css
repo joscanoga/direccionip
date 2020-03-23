@@ -38,7 +38,7 @@ body{
 }
 #ind2{
     margin:0%;
-    padding: 5%;
+    padding: 2%;
     width: 50%;
     height: 100%;
     position: absolute;
@@ -54,6 +54,6 @@ body{
     top: 300px;
     left: 0px;
     background-color: #1C0D89;
-    padding: 10%;
+    padding: 4%;
     
 }

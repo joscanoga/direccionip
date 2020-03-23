@@ -16,12 +16,12 @@ function verificarUnaIp(form){
     var mascara =form.mascara;
 //alert(ip1.value.length);
 if(!verificarip(ip1.value)){
-    alert(" ip1 no tiene formato valido")
+    alert("IP 1 no tiene formato válido")
     ip1.focus();
     ip1.select();
     estado=false;
 }else if(!verificarip(mascara.value)||verificarmascara(mascara.value)){
-    alert(" mascara no tiene formato valido")
+    alert("Máscara no tiene formato válido")
     mascara.focus();
     mascara.select();
     estado=false;
@@ -36,17 +36,17 @@ var ip2=form.ip2;
 var mascara =form.mascara;
 //alert(ip1.value.length);
 if(!verificarip(ip1.value)){
-    alert(" ip1 no tiene formato valido")
+    alert("IP 1 no tiene formato válido")
     ip1.focus();
     ip1.select();
     estado=false;
 }else if(!verificarip(ip2.value)){
-    alert(" ip2 no tiene formato valido")
+    alert("IP 2 no tiene formato válido")
     ip2.focus();
     ip2.select();
     estado=false;
 }else if(!verificarip(mascara.value)||verificarmascara(mascara.value)){
-    alert(" mascara no tiene formato valido")
+    alert("Máscara no tiene formato valido")
     mascara.focus();
     mascara.select();
     estado=false;
