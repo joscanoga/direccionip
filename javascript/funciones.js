@@ -79,7 +79,7 @@ function procesarDosIp(){
    // document.write("<h1>"+nuemromascara+"p</h1>");
    if(!mismared(ip1bin,ip2bin,numeromascara)){
        document.write("<h1>No pertenecen a la misma red</h1>")
-   }else{document.write("<table id='tresult' style='font-size:55px'><tr><td>Dirreción de red:</td><td>"+ipred+"</td></tr><tr><td>Ip brodcast:</td><td>"+ipB+"/"+numeromascara+"</td></tr><tr><td>Número máx usuarios:</td><td>"+(Math.pow(2,(32-numeromascara))-2)+"</td></tr></table>");
+   }else{document.write("<font size='7'>Pertenencen a la misma red</font><br><table id='tresult' style='font-size:55px'><tr><td>Dirreción de red:</td><td>"+ipred+"</td></tr><tr><td>Ip brodcast:</td><td>"+ipB+"/"+numeromascara+"</td></tr><tr><td>Número máx usuarios:</td><td>"+(Math.pow(2,(32-numeromascara))-2)+"</td></tr></table>");
 
    }
 }
